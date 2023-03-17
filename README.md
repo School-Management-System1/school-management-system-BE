@@ -24,6 +24,7 @@ The application was built using:
 - Frontend: React.js, Material Design Bootstrap, React Bootstrap, Pure CSS
 - Backend: Node.js, Express.js
 - Database: MongoDB
+- Tools: Postman, MongoDB Atlas
 
 ## How to Run the Application
 
