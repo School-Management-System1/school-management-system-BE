@@ -133,7 +133,6 @@ app.post('/register', async (req, res) => {
     await user.save()
 
     // Return Success Response
-    // console.log(111111);
     // res.redirect(301,'http://localhost:3000/')
     res.status(200).json({ user, message: 'User registered successfully.' })
   } catch (error) {
@@ -141,8 +140,8 @@ app.post('/register', async (req, res) => {
       // Duplicate email error
       return res.status(400).send({ message: 'Email already in use' })
     }
-    console.log(error)
-    res.status(500).json({
+    console.log(error.code)
+    res.status(400).json({
       message:
         'Password have to be at least one uppercase letter, one lowercase letter, one digit, and one special character from the given set, and a minimum length of 6 characters',
     })
